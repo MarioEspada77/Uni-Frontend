@@ -14,8 +14,15 @@ class TopMenu extends Component {
                             <li className="nav-item"><a className="nav-link" href="#">Second Item</a></li>
                             <li className="nav-item"><a className="nav-link" href="#">Nav Item</a></li>
                         </ul>
-                </div>
-                <div className="d-none float-right d-sm-none d-md-inline d-lg-inline d-xl-inline margin-profile-picture"><img className="rounded-circle shadow-sm d-xl-flex align-items-xl-start" src={profileImage} width="40" height="40" /></div>
+                    </div>
+                    <div className="dropdown">
+                        <div className="d-none float-right d-sm-none d-md-inline d-lg-inline d-xl-inline margin-profile-picture">
+                            <img className="rounded-circle shadow-sm d-xl-flex align-items-xl-start" src={profileImage} width="40" height="40" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" />
+                            <div className="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
+                                <a className="dropdown-item" href="#">Ver perfil</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </nav>
         </>
