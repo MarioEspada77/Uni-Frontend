@@ -66,7 +66,7 @@ class LoadPost extends Component {
                         
                     </div>
                 <div>
-                    <p className="text-justify" style={{marginLeft: "5px",marginRight: "5px"}}>{post.text}</p>
+                    <p className="text-justify" style={{marginLeft: "5px",marginRight: "5px", marginTop: "30px"}}>{post.text}</p>
                 <div className="card-reactions">
                     <i className="fa fa-heart-o"></i>
                     <span className="likes-count">{likes.length}</span>
