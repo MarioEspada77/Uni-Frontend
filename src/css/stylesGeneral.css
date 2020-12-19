@@ -188,3 +188,21 @@ item-reaction-post:hover {
       bottom: 60px;
   }
 }
+
+.publication-wrap{
+  padding: 20px 10px;
+  display: flex;
+}
+.publication-textArea{
+  border: 0;
+  padding: 10px;
+  width: 100%;
+  font-size: 20px;
+  outline: 0 none;
+}
+.button-publication{
+  border: 0;
+  padding: 5px;
+  background-color: orange;
+  font-size: 16px;
+}

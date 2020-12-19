@@ -3,6 +3,7 @@ import postServices from "../../Services/postService";
 import { withAuth } from "../../Context/AuthContext";
 import imageprofile from "../../images/perfil.jpg";
 import Report from "../Modal/Report";
+
 class LoadPost extends Component {
   state = {
     likes: "",
@@ -11,7 +12,6 @@ class LoadPost extends Component {
   };
   componentDidMount() {
     const { post } = this.props;
-    console.log("p", post);
     this.setState({ likes: [...post.likes] });
     this.checkIfUserDidLike();
   }

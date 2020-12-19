@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import postServices from "../../Services/postService";
 import { withAuth } from "../../Context/AuthContext";
 import Posts from "../Posts/Post";
+import AddPost from "../Modal/AddPost";
 
 class Home extends Component {
   state = {
@@ -9,14 +10,13 @@ class Home extends Component {
     userPosts: [],
     loading: true,
     error: undefined,
+    publication: false,
   };
   async componentDidMount() {
     try {
       const { user } = this.props;
-      console.log("USER FRONT", user);
       const posts = await postServices.listAllPost();
       this.setState({ posts, loading: false });
-      console.log("posts", posts);
     } catch (error) {
       this.setState({
         loading: false,
@@ -24,6 +24,12 @@ class Home extends Component {
       });
     }
   }
+  handleAddPost = () => {
+    const { publication } = this.state;
+    this.setState({ publication: !publication });
+    console.log(publication);
+  };
+
   render() {
     const { posts, error, loading } = this.state;
     const { handleLogout } = this.props;
@@ -52,11 +58,13 @@ class Home extends Component {
           <div className='col-4 col-sm-12 col-md-12 col-lg-4 col-xl-4'>
             <p style={{ padding: "10px" }}>Paragraph</p>
           </div>
-          <button className='fixed-bottom-addPost'>
+          <button className='fixed-bottom-addPost' onClick={this.handleAddPost} data-toggle="modal" data-target=".bd-example-modal-lg">
             <span>+</span>
           </button>
         </div>
+        {this.state.publication ? <AddPost /> : null}
       </div>
+
     );
   }
 }
