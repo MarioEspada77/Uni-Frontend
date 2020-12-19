@@ -15,7 +15,7 @@ class AddPost extends Component {
                     style={{ width: "40px", height: "40px", marginTop: "5px" }}
                     alt='user profile image'
                   />
-                  <textarea cols="30" rows="3" className="publication-textArea" placeholder="¿En qué estás pensando?"></textarea>
+                  <textarea cols="30" rows="3" className="publication-textArea" placeholder="¿En qué estás pensando?" style={{overflow:"hidden", resize: "none", height: "100px"}} ></textarea>
               </div>
               <button className="button-publication">Publicar</button>
             </div>
@@ -24,5 +24,4 @@ class AddPost extends Component {
     );
   }
 }
-
 export default AddPost;
