@@ -172,7 +172,7 @@ item-reaction-post:hover {
   background: #f44336;
   right: 0;
   bottom: 0;
-  position: absolute;
+  position: fixed;
   margin-right: 16px;
   margin-bottom: 16px;
   border: none;
@@ -188,7 +188,7 @@ item-reaction-post:hover {
       bottom: 60px;
   }
 }
-.publication-wrap{
+.publication-wrap form{
   padding: 20px 10px;
   display: flex;
 }
@@ -200,7 +200,11 @@ item-reaction-post:hover {
   outline: 0 none;
 }
 .button-publication{
+  position: absolute;
   border: 0;
+  bottom: 0;
+  width: 100%;
+  margin-left: -10px;
   padding: 5px;
   background-color: orange;
   font-size: 16px;

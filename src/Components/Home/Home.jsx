@@ -30,6 +30,15 @@ class Home extends Component {
     console.log(publication);
   };
 
+  handleNewPublications = publications => {
+    const { publication } = this.state;
+    console.log(this.state.publication)
+    this.setState({
+      publication: false,
+      posts: publications,
+    });
+    console.log("Después de la actualización del estado: ",this.state.publication)
+  };
   render() {
     const { posts, error, loading } = this.state;
     const { handleLogout } = this.props;
@@ -58,13 +67,19 @@ class Home extends Component {
           <div className='col-4 col-sm-12 col-md-12 col-lg-4 col-xl-4'>
             <p style={{ padding: "10px" }}>Paragraph</p>
           </div>
-          <button className='fixed-bottom-addPost' onClick={this.handleAddPost} data-toggle="modal" data-target=".bd-example-modal-lg">
+          <button
+            className='fixed-bottom-addPost'
+            onClick={this.handleAddPost}
+            data-toggle='modal'
+            data-target='.bd-example-modal-lg'
+          >
             <span>+</span>
           </button>
         </div>
-        {this.state.publication ? <AddPost /> : null}
+        {this.state.publication ? (
+          <AddPost handleNewPublications={this.handleNewPublications} />
+        ) : null}
       </div>
-
     );
   }
 }
