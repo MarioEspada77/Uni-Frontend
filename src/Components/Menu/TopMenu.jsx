@@ -3,7 +3,6 @@ import profileImage from "../../images/perfil.jpg";
 import { Link } from 'react-router-dom';
 import { withAuth } from "../../Context/AuthContext";
 class TopMenu extends Component {
-    state = {  }
     render() { 
         const { user } = this.props;
         return (
