@@ -9,6 +9,8 @@ import Home from "./Components/Home/Home";
 // MENU TOP Y BOTTOM
 import TopMenu from "./Components/Menu/TopMenu";
 import BottomMenu from "./Components/Menu/BottomMenu";
+//USER PROFILE
+import UserProfile from "./Components/UserProfile/UserProfile";
 // BOOSTRAP
 // import $ from 'jquery';
 // import Popper from 'popper.js';
@@ -25,6 +27,7 @@ function App() {
             <Switch>
                 <AnonRoute exact path="/login" component={Login} />
                 <PrivateRoute exact path="/home" component={Home} />
+                <PrivateRoute exact path="/user/:username" component={UserProfile} />
             </Switch>
             <BottomMenu />
       </AuthProvider>

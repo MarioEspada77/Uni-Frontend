@@ -1,8 +1,11 @@
 import React, { Component } from 'react';
 import profileImage from "../../images/perfil.jpg";
+import { Link } from 'react-router-dom';
+import { withAuth } from "../../Context/AuthContext";
 class TopMenu extends Component {
     state = {  }
     render() { 
+        const { user } = this.props;
         return (
             <>
             <nav className="navbar navbar-light navbar-expand-md fixed-top shadow-sm">
@@ -19,7 +22,9 @@ class TopMenu extends Component {
                         <div className="d-none float-right d-sm-none d-md-inline d-lg-inline d-xl-inline margin-profile-picture">
                             <img className="rounded-circle shadow-sm d-xl-flex align-items-xl-start" src={profileImage} width="40" height="40" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" />
                             <div className="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
-                                <a className="dropdown-item" href="#">Ver perfil</a>
+                                <Link to={`/user/${user.username}`}>
+                                    <a className="dropdown-item" href="#">Ver perfil</a>
+                                </Link>
                             </div>
                         </div>
                     </div>
@@ -30,4 +35,4 @@ class TopMenu extends Component {
     }
 }
  
-export default TopMenu;
+export default withAuth(TopMenu);
