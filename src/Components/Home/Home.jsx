@@ -60,9 +60,6 @@ class Home extends Component {
                 <p>Error al cargar las publicaciones.</p>
               </div>
             )}
-            <button className='btn btn-primary' onClick={handleLogout}>
-              Cerrar sesión
-            </button>
           </div>
           <div className='col-4 col-sm-12 col-md-12 col-lg-4 col-xl-4'>
             <p style={{ padding: "10px" }}>Paragraph</p>

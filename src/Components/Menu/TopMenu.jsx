@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import { withAuth } from "../../Context/AuthContext";
 class TopMenu extends Component {
     render() { 
-        const { user } = this.props;
+        const { user, handleLogout } = this.props;
         return (
             <>
             <nav className="navbar navbar-light navbar-expand-md fixed-top shadow-sm">
@@ -25,6 +25,7 @@ class TopMenu extends Component {
                                     <Link to={`/user/${user.username}`}>
                                         <a className="dropdown-item" href="#">Ver perfil</a>
                                     </Link>
+                                    <a className="dropdown-item" href="#" onClick={handleLogout}>Cerrar sesión</a>
                                 </div>
                             </div>
                         </div>
