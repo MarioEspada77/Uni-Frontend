@@ -1,0 +1,49 @@
+.user-profile-wrapp{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-top: 40px;
+    margin: 0 auto;
+}
+
+/* MEDIA QUERY */
+.user-profile-menu{
+    width: 200px;
+    margin-left: 20px;
+    margin-right: 10px;
+    height: 50%;
+}
+/* FIN MEDIA QUERY */
+
+.sidebar-menu{
+    position: relative;
+    display: block;
+}
+
+.menu-content{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.menu-search{
+    margin-bottom: 10px;
+}
+.user-profile-content{
+    width: 50%;
+    margin-right: 40px;
+}
+.user-profile-scroll{
+    position: relative;
+    float: left;    
+    height: 70%;
+    width: calc(100% + 20px);
+    overflow-y: auto;
+
+}
+.prueba{
+    position: relative;
+    height: 90%;
+    width: 100%;
+    overflow: hidden;
+
+}
