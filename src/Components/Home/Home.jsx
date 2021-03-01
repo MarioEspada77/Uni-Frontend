@@ -3,6 +3,7 @@ import postServices from "../../Services/postService";
 import { withAuth } from "../../Context/AuthContext";
 import Posts from "../Posts/Post";
 import AddPost from "../Modal/AddPost";
+import {returnedPosts} from "./returnedPosts";
 
 class Home extends Component {
   state = {
@@ -54,7 +55,7 @@ class Home extends Component {
               </div>
             )}
             {!error ? (
-              !loading && <Posts posts={posts}></Posts>
+              !loading && returnedPosts(posts)
             ) : (
               <div>
                 <p>Error al cargar las publicaciones.</p>
