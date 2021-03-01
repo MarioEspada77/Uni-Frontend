@@ -64,7 +64,7 @@ class LoadPost extends Component {
                 ></i>
               </span>
             </p>
-            <p className='card-publication'>Hace 1 hora atrás</p>
+            <p className='card-publication'>Hace 1 hora</p>
             <div className='dropdown'>
               <i
                 className='fas fa-ellipsis-h'
